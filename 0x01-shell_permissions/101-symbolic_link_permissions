@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown vincent:staff _hello
+echo $(stat -c '%U %G' _hello) | awk '{printf "%-7s %-7s\n", $1, $2}'
